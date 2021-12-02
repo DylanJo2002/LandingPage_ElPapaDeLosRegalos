@@ -241,9 +241,8 @@ window.onload = () => {
                 let httpCode = 201;
                 if(response.status != 201){
                     status = false;
-                    httpCode = 409;
                 }
-                showModalOnSend(status,httpCode);
+                showModalOnSend(status,response.status);
             })
             .catch(error => {
                 console.error('Error:', error)
